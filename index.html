@@ -1,11 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ONLINE CALCULATOR</title>
-</head>
-<body>
-    
-</body>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Calculatrice en ligne</title>
+      <link rel="stylesheet" href="styles.css">
+   </head>
+   <body>
+        <div class="calculator">
+            <input type="text" id="display" disabled>
+
+            <div class="buttons">
+                <!-- First line -->
+                <button class="clear" colspan="2">C</button>
+                <button class="delete" colspan="2">D</button>
+
+                <!-- Second line -->
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button class="operator">+</button>
+
+                <!-- Third line -->
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button class="operator">-</button>
+
+                <!-- Fourth line -->
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button class="operator">×</button>
+
+                <!-- Fifth line -->
+                <button class="zero" colspan="2">0</button>
+                <button>.</button>
+                <button class="operator">÷</button>
+
+                <!-- Sixth line -->
+                <button class="equal" colspan="4">=</button>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+   </body>
 </html>
