@@ -2,7 +2,7 @@
 
 ## What is this project ?
 
-This project is an online calculator coded with HTML, CSS and JavaScript.
+This project is an online calculator coded with HTML5, CSS3 and JavaScript.
 
 ## Use the calculator
 
