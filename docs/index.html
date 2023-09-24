@@ -12,34 +12,37 @@
             <input type="text" id="display" disabled>
             <div class="buttons">
                 <!-- First line -->
-                <button class="clear" colspan="2">C</button>
-                <button class="delete" colspan="2">D</button>
+                <button class="clear" colspan="2" onclick="clearDisplay()">C</button>
+                <button class="delete" colspan="2" onclick="deleteLast()">D</button>
 
                 <!-- Second line -->
-                <button>7</button>
-                <button>8</button>
-                <button>9</button>
-                <button class="operator">+</button>
+                <button onclick="appendNumber(7)">7</button>
+                <button onclick="appendNumber(8)">8</button>
+                <button onclick="appendNumber(9)">9</button>
+                <button class="operator" onclick="appendOperator('+')">+</button>
+
                 <!-- Third line -->
-                <button>4</button>
-                <button>5</button>
-                <button>6</button>
-                <button class="operator">-</button>
+                <button onclick="appendNumber(4)">4</button>
+                <button onclick="appendNumber(5)">5</button>
+                <button onclick="appendNumber(6)">6</button>
+                <button class="operator" onclick="appendOperator('-')">-</button>
 
                 <!-- Fourth line -->
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button class="operator">×</button>
+                <button onclick="appendNumber(1)">1</button>
+                <button onclick="appendNumber(2)">2</button>
+                <button onclick="appendNumber(3)">3</button>
+                <button class="operator" onclick="appendOperator('×')">×</button>
 
                 <!-- Fifth line -->
-                <button class="zero" colspan="2">0</button>
-                <button>.</button>
-                <button class="operator">÷</button>
+                <button class="zero" colspan="2" onclick="appendNumber(0)">0</button>
+                <button onclick="appendDecimal()">.</button>
+                <button class="operator" onclick="appendOperator('÷')">÷</button>
 
                 <!-- Sixth line -->
-                <button class="equal" colspan="4">=</button>
+                <button class="equal" colspan="4" onclick="calculate()">=</button>
             </div>
         </div>
+
+        <script src="js/script.js"></script>
     </body>
 </html>
