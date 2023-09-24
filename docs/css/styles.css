@@ -71,14 +71,14 @@ button:active {
     background-color: #d08e00;
 }
 
+.zero {
+    grid-column: span 2;
+}
+
 .equal {
     background-color: #55c43e;
     grid-column: span 4;
 }
 .equal:active {
     background-color: #449833;
-}
-
-.zero {
-    grid-column: span 2;
 }
