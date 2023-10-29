@@ -24,12 +24,14 @@ button:active {
 }
 
 #display {
-    width: 97.5%;
+    width: 275px;
     height: 40px;
     font-family: 'Orbitron', sans-serif;
     font-size: 24px;
     text-align: right;
     margin-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .calculator {
