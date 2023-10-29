@@ -83,6 +83,7 @@ button:active {
     background-color: #55c43e;
     grid-column: span 4;
 }
+
 .equal:active {
     background-color: #449833;
 }
