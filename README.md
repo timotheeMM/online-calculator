@@ -1,5 +1,7 @@
 <h1 align="center">ONLINE CALCULATOR</h1>
 
+![online_calculator](https://github.com/timotheeMM/online-calculator/assets/143833750/d8b6db2c-abb8-4de8-8cb5-f070fb81c35e)
+
 ## What is this project ?
 
 This project is an online calculator coded with HTML5, CSS3 and JavaScript.
