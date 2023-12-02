@@ -12,10 +12,8 @@ function appendOperator(op) {
 }
 
 function appendDecimal() {
-    if (!expression.includes('.')) {
-        expression += '.';
-        display.value = expression;
-    }
+    expression += '.';
+    display.value = expression;
 }
 
 function clearDisplay() {
