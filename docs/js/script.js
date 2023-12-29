@@ -16,7 +16,7 @@ function appendOperator(op) {
 }
 
 function appendDecimal() {
-    lastChar = expression.charAt(expression.length - 1)
+    lastChar = expression.charAt(expression.length - 1);
 
     if (lastChar !== "+" && lastChar !== "-" && lastChar !== "×" && lastChar !== "÷" && lastChar !== ".") {
         expression += '.';
