@@ -7,7 +7,7 @@ function appendNumber(num) {
 }
 
 function appendOperator(op) {
-    lastChar = expression.charAt(expression.length - 1)
+    lastChar = expression.charAt(expression.length - 1);
 
     if (lastChar !== "+" && lastChar !== "-" && lastChar !== "×" && lastChar !== "÷" && lastChar !== ".") {
         expression += op;
