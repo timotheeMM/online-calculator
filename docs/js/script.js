@@ -1,11 +1,19 @@
 let display = document.getElementById('display');
 let expression = '';
 
+/**
+ * Append a number to the expression and update the display.
+ * @param {string} num - The number to append.
+ */
 function appendNumber(num) {
     expression += num;
     display.value = expression;
 }
 
+/**
+ * Append an operator to the expression if the last character is not already an operator.
+ * @param {string} op - The operator to append.
+ */
 function appendOperator(op) {
     lastChar = expression.charAt(expression.length - 1);
 
@@ -15,6 +23,9 @@ function appendOperator(op) {
     }
 }
 
+/**
+ * Append a decimal point to the expression if the last character is not already a decimal point or an operator.
+ */
 function appendDecimal() {
     lastChar = expression.charAt(expression.length - 1);
 
@@ -24,11 +35,17 @@ function appendDecimal() {
     }
 }
 
+/**
+ * Clear the display and reset the expression.
+ */
 function clearDisplay() {
     expression = '';
     display.value = expression;
 }
 
+/**
+ * Delete the last character from the expression, considering special cases like "Error" and "Infinity".
+ */
 function deleteLast() {
     let lastFiveCharacters = expression.slice(-5);
     let lastEightCharacters = expression.slice(-8);
@@ -45,12 +62,16 @@ function deleteLast() {
     }   
 }
 
+/**
+ * Evaluate the expression, replace '×' and '÷' with '*' and '/', and update the display.
+ * Handle errors and display 'Error' in case of an exception.
+ */
 function calculate() {
     try {
         let modifiedExpression = expression.replace(/×/g, '*').replace(/÷/g, '/');
         let result = eval(modifiedExpression);
         expression = result.toString();
-        display.value = expression
+        display.value = expression;
     } catch (error) {
         expression = 'Error';
         display.value = expression;
