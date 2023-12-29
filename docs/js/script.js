@@ -8,7 +8,7 @@ function appendNumber(num) {
 
 function appendOperator(op) {
     lastChar = expression.charAt(expression.length - 1)
-    
+
     if (lastChar !== "+" && lastChar !== "-" && lastChar !== "×" && lastChar !== "÷" && lastChar !== ".") {
         expression += op;
         display.value = expression;
@@ -16,8 +16,12 @@ function appendOperator(op) {
 }
 
 function appendDecimal() {
-    expression += '.';
-    display.value = expression;
+    lastChar = expression.charAt(expression.length - 1)
+
+    if (lastChar !== "+" && lastChar !== "-" && lastChar !== "×" && lastChar !== "÷" && lastChar !== ".") {
+        expression += '.';
+        display.value = expression;
+    }
 }
 
 function clearDisplay() {
