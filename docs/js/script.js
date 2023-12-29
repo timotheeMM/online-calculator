@@ -49,8 +49,8 @@ function calculate() {
     try {
         let modifiedExpression = expression.replace(/×/g, '*').replace(/÷/g, '/');
         let result = eval(modifiedExpression);
-        display.value = result;
         expression = result.toString();
+        display.value = expression
     } catch (error) {
         expression = 'Error';
         display.value = expression;
