@@ -30,8 +30,19 @@ function clearDisplay() {
 }
 
 function deleteLast() {
-    expression = expression.slice(0, -1);
-    display.value = expression;
+    let lastFiveCharacters = expression.slice(-5);
+    let lastEightCharacters = expression.slice(-8);
+
+    if (lastFiveCharacters === "Error") {
+        expression = expression.slice(0, -5);
+        display.value = expression;
+    } else if (lastEightCharacters === "Infinity") {
+        expression = expression.slice(0, -8);
+        display.value = expression;
+    } else {
+        expression = expression.slice(0, -1);
+        display.value = expression;
+    }   
 }
 
 function calculate() {
@@ -41,7 +52,7 @@ function calculate() {
         display.value = result;
         expression = result.toString();
     } catch (error) {
-        display.value = 'Error';
-        expression = '';
+        expression = 'Error';
+        display.value = expression;
     }
 }
