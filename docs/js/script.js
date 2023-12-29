@@ -26,7 +26,7 @@ function appendDecimal() {
 
 function clearDisplay() {
     expression = '';
-    display.value = '';
+    display.value = expression;
 }
 
 function deleteLast() {
