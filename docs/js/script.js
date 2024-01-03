@@ -20,6 +20,11 @@ function appendNumber(num) {
  * @param {string} op - The operator to append.
  */
 function appendOperator(op) {
+    if (expression === "Error" || expression === "Infinity") {
+        expression = '';
+        display.value = expression
+    }
+
     lastChar = expression.charAt(expression.length - 1);
 
     if (lastChar !== "+" && lastChar !== "-" && lastChar !== "×" && lastChar !== "÷" && lastChar !== ".") {
