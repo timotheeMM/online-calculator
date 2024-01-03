@@ -45,8 +45,10 @@ function appendDecimal() {
     lastChar = expression.charAt(expression.length - 1);
 
     if (lastChar !== "+" && lastChar !== "-" && lastChar !== "×" && lastChar !== "÷" && lastChar !== ".") {
-        expression += '.';
-        display.value = expression;
+        if (expression !== '') {
+            expression += '.';
+            display.value = expression;
+        }
     }
 }
 
