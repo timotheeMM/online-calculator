@@ -6,7 +6,7 @@ let expression = '';
  * @param {string} num - The number to append.
  */
 function appendNumber(num) {
-    if (expression === "NaN" || expression === "Error" || expression === "-Infinity" || expression === "Infinity") {
+    if (expression === 'NaN' || expression === 'Error' || expression === '-Infinity' || expression === 'Infinity') {
         expression = '';
         display.value = expression
     }
@@ -20,14 +20,14 @@ function appendNumber(num) {
  * @param {string} op - The operator to append.
  */
 function appendOperator(op) {
-    if (expression === "NaN" || expression === "Error" || expression === "-Infinity" || expression === "Infinity") {
+    if (expression === 'NaN' || expression === 'Error' || expression === '-Infinity' || expression === 'Infinity') {
         expression = '';
         display.value = expression
     }
 
     lastChar = expression.charAt(expression.length - 1);
 
-    if (lastChar !== "+" && lastChar !== "-" && lastChar !== "×" && lastChar !== "÷" && lastChar !== ".") {
+    if (lastChar !== '+' && lastChar !== '-' && lastChar !== '×' && lastChar !== '÷' && lastChar !== '.') {
         expression += op;
         display.value = expression;
     }
@@ -37,14 +37,14 @@ function appendOperator(op) {
  * Append a decimal point to the expression if the last character is not already a decimal point or an operator.
  */
 function appendDecimal() {
-    if (expression === "NaN" || expression === "Error" || expression === "-Infinity" || expression === "Infinity") {
+    if (expression === 'NaN' || expression === 'Error' || expression === '-Infinity' || expression === 'Infinity') {
         expression = '';
         display.value = expression
     }
 
     lastChar = expression.charAt(expression.length - 1);
 
-    if (lastChar !== "+" && lastChar !== "-" && lastChar !== "×" && lastChar !== "÷" && lastChar !== ".") {
+    if (lastChar !== '+' && lastChar !== '-' && lastChar !== '×' && lastChar !== '÷' && lastChar !== '.') {
         if (expression !== '') {
             expression += '.';
             display.value = expression;
@@ -69,16 +69,16 @@ function deleteLast() {
     let lastEightCharacters = expression.slice(-8);
     let lastNineCharacters = expression.slice(-9);
 
-    if (lastThreeCharacters === "NaN") {
+    if (lastThreeCharacters === 'NaN') {
         expression = expression.slice(0, -3);
         display.value = expression;
-    } else if (lastFiveCharacters === "Error") {
+    } else if (lastFiveCharacters === 'Error') {
         expression = expression.slice(0, -5);
         display.value = expression;
-    } else if (lastNineCharacters === "-Infinity") {
+    } else if (lastNineCharacters === '-Infinity') {
         expression = expression.slice(0, -9);
         display.value = expression;
-    } else if (lastEightCharacters === "Infinity") {
+    } else if (lastEightCharacters === 'Infinity') {
         expression = expression.slice(0, -8);
         display.value = expression;
     } else {
@@ -95,7 +95,6 @@ function calculate() {
     try {
         let modifiedExpression = expression.replace(/×/g, '*').replace(/÷/g, '/');
         let result = eval(modifiedExpression);
-        console.log(modifiedExpression + "=" + result)
         expression = result.toString();
         display.value = expression;
     } catch (error) {
