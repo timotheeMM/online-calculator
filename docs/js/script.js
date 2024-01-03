@@ -6,6 +6,11 @@ let expression = '';
  * @param {string} num - The number to append.
  */
 function appendNumber(num) {
+    if (expression === "Error" || expression === "Infinity") {
+        expression = '';
+        display.value = expression
+    }
+
     expression += num;
     display.value = expression;
 }
