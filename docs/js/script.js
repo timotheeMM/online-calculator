@@ -37,6 +37,11 @@ function appendOperator(op) {
  * Append a decimal point to the expression if the last character is not already a decimal point or an operator.
  */
 function appendDecimal() {
+    if (expression === "NaN" || expression === "Error" || expression === "-Infinity" || expression === "Infinity") {
+        expression = '';
+        display.value = expression
+    }
+
     lastChar = expression.charAt(expression.length - 1);
 
     if (lastChar !== "+" && lastChar !== "-" && lastChar !== "×" && lastChar !== "÷" && lastChar !== ".") {
