@@ -1,6 +1,6 @@
 <h1 align="center">ONLINE CALCULATOR</h1>
 
-![online_calculator](https://github.com/timotheeMM/online-calculator/assets/143833750/d8b6db2c-abb8-4de8-8cb5-f070fb81c35e)
+![screenshot](https://github.com/timotheeMM/online-calculator/assets/143833750/5fa8e007-ae31-48bc-9910-0398d5fe4933)
 
 ## What is this project ?
 
