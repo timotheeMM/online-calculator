@@ -6,11 +6,7 @@ let expression = '';
  * @param {string} num - The number to append.
  */
 function appendNumber(num) {
-    if (expression === 'NaN' || expression === 'Error' || expression === '-Infinity' || expression === 'Infinity') {
-        expression = '';
-        display.value = expression
-    }
-
+    handleSpecialCases();
     expression += num;
     display.value = expression;
 }
@@ -20,11 +16,7 @@ function appendNumber(num) {
  * @param {string} op - The operator to append.
  */
 function appendOperator(op) {
-    if (expression === 'NaN' || expression === 'Error' || expression === '-Infinity' || expression === 'Infinity') {
-        expression = '';
-        display.value = expression
-    }
-
+    handleSpecialCases();
     lastChar = expression.charAt(expression.length - 1);
 
     if (lastChar !== '+' && lastChar !== '-' && lastChar !== '×' && lastChar !== '÷' && lastChar !== '.') {
@@ -37,11 +29,7 @@ function appendOperator(op) {
  * Append a decimal point to the expression if the last character is not already a decimal point or an operator.
  */
 function appendDecimal() {
-    if (expression === 'NaN' || expression === 'Error' || expression === '-Infinity' || expression === 'Infinity') {
-        expression = '';
-        display.value = expression
-    }
-
+    handleSpecialCases();
     lastChar = expression.charAt(expression.length - 1);
 
     if (lastChar !== '+' && lastChar !== '-' && lastChar !== '×' && lastChar !== '÷' && lastChar !== '.') {
@@ -86,6 +74,19 @@ function deleteLast() {
         display.value = expression;
     }   
 }
+
+/**
+ * Handles special cases in the expression, clearing it if it matches predefined values.
+ * Special cases include 'NaN', 'Error', '-Infinity', and 'Infinity'.
+ */
+function handleSpecialCases() {
+    if (expression === 'NaN' || expression === 'Error' || expression === '-Infinity' || expression === 'Infinity') {
+        // Clear the expression and update the display
+        expression = '';
+        updateDisplay();
+    }
+}
+
 
 /**
  * Evaluate the expression, replace '×' and '÷' with '*' and '/', and update the display.
